@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search for your nearest Bank or Pizza</title>
+
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbBJVrZFk680v9xgk7kZU-XACH9s3f-rM&callback=initMap"
+  type="text/javascript"></script>
+
+	<script src="main.js"></script>
+
+ 	<style type='text/css'>
+ 		html { height: 100% }
+		body { height: 100%; margin: 0; padding: 0 }
+		#map_canvas { height: 100% }
+		#resultsList{ width: 30%; color:blue; margin-left: 30%; margin-top:30px; border: 3px solid black; padding: 5px; height: 500px; overflow: auto; }
+	</style>
+</head>
+
+<body>
+	<h2>Search your nearest Bank or Pizza store</h2>
+	<form name="searchForm" method="GET" action="javascript:searchNow()">
+		<div>
+			Search for: <input id="searchType" type="text">
+			<input type="submit" value="Near me">
+		</div>
+	</form>
+	<div id="outputDiv" style="width:85%; height:85%;">Please Wait, Showing Map</div>
+
+
+	<script>
+		getLocation();
+	</script>
+</body>
+</html>
